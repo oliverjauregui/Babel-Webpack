@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --entry ./src/js/app.js --output-filename ./dist/bundle.js",
-    "start": "webpack --entry ./src/js/app.js --output-filename ./dist/bundle.js"
+    "build": "webpack --entry ./src/js/app.js --output-filename ./dist/bundle.js",
+    "heroku-postbuild": "npm run build",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
